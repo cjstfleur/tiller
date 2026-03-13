@@ -1,0 +1,48 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+data
+*.db*
+
+# --- Agent/AI Files ---
+# Local agent files and data
+agents/
+agent_data/
+*.agent
+
+# CrewAI, LangChain, OpenAI typical output
+crew_output/
+agent_output/
+.langchain/
+.openai/
+.claude/
+CLAUDE.md
+
+# Temporary Session/Cache files
+*.agent.json
+agent_session.db
+agents_cache/
+.playwright
+.playwright-cli

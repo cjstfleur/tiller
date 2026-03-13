@@ -1,0 +1,17 @@
+services:
+  tiller:
+    build: .
+    container_name: tiller
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - tiller-data:/app/data
+    environment:
+      - TILLER_PASSWORD=${TILLER_PASSWORD:-}
+      - TILLER_DB_PATH=/app/data/tiller.db
+      - NODE_ENV=production
+
+volumes:
+  tiller-data:
+    driver: local
