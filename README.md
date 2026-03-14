@@ -12,7 +12,26 @@ Tiller is a self-hosted homelab dashboard that brings all your self-hosted servi
 
 ## Screenshots
 
-> Screenshots coming soon.
+<kbd><img src="docs/screenshots/dashboard.png" alt="Dashboard" /></kbd>
+
+<table>
+  <tr>
+    <td width="50%"><kbd><img src="docs/screenshots/chat.png" alt="Chat" /></kbd></td>
+    <td width="50%"><kbd><img src="docs/screenshots/services.png" alt="Services" /></kbd></td>
+  </tr>
+  <tr>
+    <td width="50%"><kbd><img src="docs/screenshots/ollama.png" alt="Ollama detail" /></kbd></td>
+    <td><kbd><img src="docs/screenshots/uptime-kuma.png" alt="Uptime Kuma detail" /></kbd></td>
+  </tr>
+  <tr>
+    <td><kbd><img src="docs/screenshots/n8n.png" alt="n8n detail" /></kbd></td>
+    <td><kbd><img src="docs/screenshots/pihole.png" alt="Pi-hole detail" /></kbd></td>
+  </tr>
+  <tr>
+    <td><kbd><img src="docs/screenshots/npm.png" alt="Nginx Proxy Manager detail" /></kbd></td>
+    <td><kbd><img src="docs/screenshots/settings.png" alt="Settings detail" /></kbd></td>
+  </tr>
+</table>
 
 ---
 
@@ -43,6 +62,7 @@ More integrations are planned. See [Contributing](#contributing) to add one.
 ---
 
 ## Quick Start
+
 
 **Requirements:** Docker and Docker Compose.
 

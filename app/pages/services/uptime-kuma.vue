@@ -155,8 +155,11 @@ const configModalOpen = ref(false)
               <p class="text-sm font-semibold text-highlighted truncate">
                 {{ monitor.name }}
               </p>
-              <p class="text-xs text-muted truncate">
-                {{ monitor.url }}
+              <p
+                v-if="monitor.hostname || (monitor.url && !/^https?:\/\/?$/.test(monitor.url))"
+                class="text-xs text-muted truncate"
+              >
+                {{ monitor.hostname || monitor.url }}
               </p>
             </div>
             <div class="flex flex-col items-end shrink-0 gap-0.5">

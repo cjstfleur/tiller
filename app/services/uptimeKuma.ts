@@ -2,6 +2,7 @@ export interface UptimeKumaMonitor {
   id: number
   name: string
   url: string
+  hostname: string
   active: boolean
   uptime24h: number | null
   avgPing: number | null
@@ -35,6 +36,7 @@ function parsePrometheusMetrics(text: string): UptimeKumaMonitor[] {
         id: parseInt(id),
         name: labels['monitor_name'] ?? '',
         url: labels['monitor_url'] ?? '',
+        hostname: labels['monitor_hostname'] ?? '',
         active: false,
         uptime24h: null,
         avgPing: null,
@@ -42,7 +44,7 @@ function parsePrometheusMetrics(text: string): UptimeKumaMonitor[] {
       }
     }
 
-    const mon = monitors[id]
+    const mon = monitors[id]!
     if (metricName === 'monitor_status') {
       mon.lastStatus = value === 1 ? 1 : 0
       mon.active = value === 1
